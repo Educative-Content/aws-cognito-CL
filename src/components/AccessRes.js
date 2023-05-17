@@ -5,7 +5,7 @@ const AccessRes = () =>{
     // Configure Credentials to use Cognito
     AWS.config.region = 'us-east-1'; 
     AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-        IdentityPoolId: "us-east-1:84162fc1-8bb8-4f00-845a-c2607e51bfd1",
+        IdentityPoolId: "<Provide Identity Pool ID here>",
     });
 
     //get credentials to access AWS DynamoDDB
