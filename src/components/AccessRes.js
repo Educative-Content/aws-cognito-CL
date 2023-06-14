@@ -10,7 +10,6 @@ const AccessRes = () =>{
 
     //get credentials to access AWS DynamoDDB
     AWS.config.credentials.get(async function(err){
-        alert("we are inside it");
         if (err) {
             alert('Error retrieving credentials.');
             console.error(err);
@@ -20,11 +19,10 @@ const AccessRes = () =>{
         AWS.config.update({region: 'us-east-1'});
         //create a dynamo db client
         var dynamodb = new AWS.DynamoDB({apiVersion: '2012-08-10'});
-        alert("we got the table")
         const params = {
             TableName: "DynamoDBTable",
             Key: {
-                'ItemID': {'N': '121'}
+                'UserID': {'N': '121'}
             },
 
         };
